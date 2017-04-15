@@ -1,0 +1,34 @@
+{
+  "name": "sculptorcli",
+  "version": "0.1.0",
+  "description": "Command Line Interface for Sculptor",
+  "bin": {
+    "sculptor": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "src/version.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1fabiosoares/sculptorcli.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "cli",
+    "css",
+    "sculptor"
+  ],
+  "author": "Fabio Soares <fabioars@live.com>",
+  "license": "GPL-3.0",
+  "engines": {
+    "node": ">=4"
+  },
+  "bugs": {
+    "url": "https://github.com/1fabiosoares/sculptorcli/issues"
+  },
+  "homepage": "https://github.com/1fabiosoares/sculptorcli#readme",
+  "dependencies": {
+    "shelljs": "^0.7.7"
+  }
+}
