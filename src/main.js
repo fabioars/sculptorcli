@@ -25,4 +25,9 @@ function init(arg){
     process.exit(1);
 }
 
+function check(arg){
+    return (arg.indexOf('new') !== -1 || arg.indexOf('init') !== -1);
+}
+
 exports.init = init;
+exports.check = check;
