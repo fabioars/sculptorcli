@@ -11,6 +11,8 @@ function init(arg){
 
     const source = arg[1] || 'sass/sculptor.scss';
     const build  = arg[2] || 'css/sculptor.css';
+    const minified = build.replace(/.css/g, '.min.css');
+
     if(!fs.existsSync(source)){
         console.log(`[Error] directory ${source} doesn't exists.`);
         process.exit(1);
@@ -21,7 +23,11 @@ function init(arg){
     }
 
     console.log(`Starting to watch file ${source} to generate ${build}`);
-    shelljs.exec(`sass --watch ${source}:${build}`);
+    console.log(`Starting to watch file ${source} to generate ${minified} version`);
+    console.log(`Press Ctrl + C to exit `);
+    shelljs.exec(`sass --watch ${source}:${build}`, {async: true});
+    shelljs.exec(`sass --watch ${source}:${minified} --style compressed`);
+
     process.exit(1);
 }
 

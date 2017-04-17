@@ -1,13 +1,14 @@
 'use strict';
 const help =
-`
+`$ sculptor --help
+
   Usage: sculptor [action] [directory] [<modfiers>]
 
 
   Actions:
     new, init [directory]                create a new Sculptor app
     watch, w [<source>][<directory>]  watch files or directories for changes
-        
+
 
   Options:
     -h, --help                 output usage /information
